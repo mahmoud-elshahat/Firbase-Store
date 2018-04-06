@@ -8,4 +8,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/colorAccent</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">#000</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="android:textColorHighlight">#679</item>
+        <item name="android:textColorLink">#9E9E9E</item>
+
+    </style>
+
+
 </resources>

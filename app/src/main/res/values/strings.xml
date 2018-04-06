@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Store</string>
+
+
+    <string name="intro">Simple Product Store , Welcome !</string>
+    <string name="newUser1">Not a Member yet?</string>
+    <string name="newUser2">Sign Up here.</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="passowrd">Password</string>
+    <string name="oldUser1">Already have account ?</string>
+    <string name="oldUser2">Login here .</string>
+    <string name="register">Register</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+
 </resources>

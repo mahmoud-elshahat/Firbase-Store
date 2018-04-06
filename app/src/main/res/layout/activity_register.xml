@@ -1,0 +1,161 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:layoutDirection="locale"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.1">
+
+            <LinearLayout
+                android:id="@+id/login_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/appName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel"
+                    app:errorTextAppearance="@color/colorPrimary">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_email"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="@string/email"
+                        android:textColor="@color/black"
+                        android:inputType="textEmailAddress"
+                        android:paddingBottom="20dp"
+                        android:textSize="16sp"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel"
+                    app:passwordToggleEnabled="true">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_password"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="@string/passowrd"
+                        android:inputType="textPassword"
+                        android:textColor="@color/black"
+                        android:paddingBottom="20dp"
+                        android:singleLine="true"
+                        android:textSize="16sp"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel"
+                    app:passwordToggleEnabled="true">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_confirm_password"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:hint="@string/confirm_password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/black"
+                        android:paddingBottom="20dp"
+                        android:singleLine="true"
+                        android:textSize="16sp"
+                        />
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+                <Button
+                    android:id="@+id/loginBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/loginbutton_selector"
+                    android:onClick="Register"
+                    android:text="@string/register"
+                    android:textColor="@color/background_color"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="5dp"
+                        android:text="@string/oldUser1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:layout_marginRight="5dp" />
+
+                    <TextView
+                        android:id="@+id/signUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/oldUser2"
+                        android:onClick="openLogin"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</ScrollView>
