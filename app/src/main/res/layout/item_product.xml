@@ -38,22 +38,22 @@
 
 
 
-    <ImageButton
+    <ImageView
         android:id="@+id/delete"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:src="@drawable/delete"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/edit"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:src="@drawable/edit"
         android:layout_toLeftOf="@id/delete"
-        android:layout_marginRight="4dp"
+        android:layout_marginRight="10dp"
         />
 
 

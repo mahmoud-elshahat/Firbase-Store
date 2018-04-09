@@ -18,5 +18,6 @@
     <string name="price">Price</string>
     <string name="quantity">Quantity</string>
     <string name="add">Add</string>
+    <string name="update">Update</string>
 
 </resources>

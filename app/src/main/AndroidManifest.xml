@@ -22,7 +22,8 @@
         <activity
             android:name=".HomeActivity"
             android:label="Home" />
-        <activity android:name=".AddProductActivity"></activity>
+        <activity android:name=".AddProductActivity" />
+        <activity android:name=".EditProductActivity"></activity>
     </application>
 
 </manifest>

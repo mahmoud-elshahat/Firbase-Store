@@ -27,18 +27,16 @@ public class HomeActivity extends AppCompatActivity {
 
         productsList=(ListView) findViewById(R.id.products_list);
 
-        products = new ArrayList<>();
-
         mDatabase = FirebaseDatabase.getInstance().getReference().child("products");
 
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                products = new ArrayList<>();
                 for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
                     Product product= postSnapshot.getValue(Product.class);
                     products.add(product);
                 }
-                
                 //adapter
                 ProductsAdapter adapter = new ProductsAdapter(HomeActivity.this, products);
 
@@ -52,12 +50,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
     }
-
 
     public void addProduct(View view)
     {
