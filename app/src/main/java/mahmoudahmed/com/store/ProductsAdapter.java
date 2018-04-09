@@ -9,6 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 
 /**
@@ -17,8 +20,12 @@ import java.util.ArrayList;
 
 public class ProductsAdapter extends ArrayAdapter<Product> {
 
+
+    private DatabaseReference mDatabase;
+
     public ProductsAdapter(Context context, ArrayList<Product> products) {
         super(context, 0, products);
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("products");
 
     }
 
@@ -62,6 +69,15 @@ public class ProductsAdapter extends ArrayAdapter<Product> {
             }
         });
 
+
+
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mDatabase.child(product.getId()).removeValue();
+            }
+        });
+        
 
 
         return convertView;
