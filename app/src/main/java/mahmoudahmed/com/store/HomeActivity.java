@@ -6,10 +6,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ListView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity {
 
+    private DatabaseReference mDatabase;
+
+    ArrayList<Product>products;
     ListView productsList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,20 +27,34 @@ public class HomeActivity extends AppCompatActivity {
 
         productsList=(ListView) findViewById(R.id.products_list);
 
+        products = new ArrayList<>();
 
-        //data
-        ArrayList<Product> products = new ArrayList<Product>();
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("products");
 
-        Product fake=new Product("milk", "15","5");
-        Product fake2=new Product("wqwqwq", "55","12");
-        products.add(fake);
-        products.add(fake2);
+        mDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
+                    Product product= postSnapshot.getValue(Product.class);
+                    products.add(product);
+                }
+                
+                //adapter
+                ProductsAdapter adapter = new ProductsAdapter(HomeActivity.this, products);
 
-        //adapter
-        ProductsAdapter adapter = new ProductsAdapter(this, products);
+                //attach
+                productsList.setAdapter(adapter);
 
-        //attach
-        productsList.setAdapter(adapter);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
+
+
+
+
 
     }
 
