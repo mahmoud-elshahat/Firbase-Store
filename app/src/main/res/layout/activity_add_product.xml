@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="mahmoudahmed.com.store.AddProductActivity">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/TextLabel"
+        app:errorTextAppearance="@color/colorPrimary">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/add_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="@string/name"
+            android:textColor="@color/black"
+            android:inputType="textEmailAddress"
+            android:paddingBottom="20dp"
+            android:textSize="16sp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/TextLabel"
+        app:errorTextAppearance="@color/colorPrimary">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/add_price"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="@string/price"
+            android:textColor="@color/black"
+            android:inputType="numberDecimal"
+            android:paddingBottom="20dp"
+            android:textSize="16sp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/TextLabel"
+        app:errorTextAppearance="@color/colorPrimary">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/add_quantity"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:hint="@string/quantity"
+            android:textColor="@color/black"
+            android:inputType="numberDecimal"
+            android:paddingBottom="20dp"
+            android:textSize="16sp"
+            />
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/loginbutton_selector"
+        android:onClick="add"
+        android:text="@string/add"
+        android:textColor="@color/background_color"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

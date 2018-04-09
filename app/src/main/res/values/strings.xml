@@ -13,5 +13,10 @@
     <string name="register">Register</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="sign_up">Sign Up</string>
+    <string name="add_product">Add Product</string>
+    <string name="name">Name</string>
+    <string name="price">Price</string>
+    <string name="quantity">Quantity</string>
+    <string name="add">Add</string>
 
 </resources>
